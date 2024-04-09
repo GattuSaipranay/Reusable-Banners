@@ -1,16 +1,18 @@
+/* eslint-disable react/button-has-type */
+// Write your code here.
 import './index.css'
 
 const BannerCardItem = props => {
   const {bannerCard} = props
-  const {headerText, description, className} = bannerCard
+  const {headerText, description, id} = bannerCard
+
   return (
-    <li className={`card ${className}`}>
+    <li className={`banner-card-item card-${id}`}>
       <div>
-        <h1 className="heading">{headerText}</h1>
-        <p className="description">{description}</p>
-        <button className="button" type="button">
-          Show More
-        </button>
+        <h1 className="banner-card-heading">{headerText}</h1>
+        <p className="banner-card-para">{description}</p>
+
+        <button className="show-more-btn">Show More</button>
       </div>
     </li>
   )
